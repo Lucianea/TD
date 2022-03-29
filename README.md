@@ -89,12 +89,20 @@ No entanto para satisfazer a restrição Q <= 180, a solução ótima seria enco
 
 Cada aluno deverá apresentar um dos problemas abaixo. Definir as datas e pessoas.
 
-- Problema de alocação de recursos: Produção de cimento  
-- Problema de transferência de empregados
-- Problema da troca de equipamento
-- Problema clássico de transporte
-- Problema de transporte com transbordo
-- Problema de alocação de tarefas
+- Problema de alocação de recursos: Produção de cimento - Emmanuel
+- Problema de transferência de empregados - Renato
+- Problema da troca de equipamento - Thaynara
+- Problema clássico de transporte - Késia
+- Problema de transporte com transbordo - Vanessa
+- Problema de alocação de tarefas - Roberta
+
+# Bibliografia
+
+1- Introdução à Pesquisa Operacional - Métodos e Modelos para a análise de decisão, Eduardo Leopoldino de Andrade, 2a. ed., LTC, 2000.
+
+2- Pesquisa Operacional para Cursos de Engenharia - Patricia Belfiore e Luis Paulo Fávero, Elsevier, 2013.
+
+
 
 
 
