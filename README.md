@@ -102,6 +102,10 @@ Cada aluno deverá apresentar um dos problemas abaixo. Definir as datas e pessoa
 
 2- Pesquisa Operacional para Cursos de Engenharia - Patricia Belfiore e Luis Paulo Fávero, Elsevier, 2013.
 
+3- Programação Linear e Fluxo em Redes - Marco César Goldbarg, Henrique Pacca Loureiro Luna, Elizabeth Ferreira Gouvêa Goldbarg. - 1. ed. - Rio de Janeiro : Elsevier, 2015.
+
+4- Pesquisa operacional [recurso eletrônico] / Marcos Arenales...[et al.]. - Rio de Janeiro : Elsevier : ABEPRO, 2011.
+
 
 
 
