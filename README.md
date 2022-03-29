@@ -85,7 +85,7 @@ Derivando a função de minimização em relação a Q obtemos Q*=200.
 No entanto para satisfazer a restrição Q <= 180, a solução ótima seria encomendar 180 itens por vez.
 
 
-#Problemas a serem estudados
+# Problemas a serem estudados
 
 Cada aluno deverá apresentar um dos problemas abaixo. Definir as datas e pessoas.
 
