@@ -90,7 +90,9 @@ No entanto para satisfazer a restrição Q <= 180, a solução ótima seria enco
 Cada aluno deverá apresentar um dos problemas abaixo. Definir as datas e pessoas.
 
 - Problema de alocação de recursos: Produção de cimento - Emmanuel
+- O Problema da Mistura de Petróleo - Matheus
 - Problema de transferência de empregados - Renato
+- O Problema de Alocação de Pessoal - Cristiane
 - Problema da troca de equipamento - Thaynara
 - Problema clássico de transporte - Késia
 - Problema de transporte com transbordo - Vanessa
