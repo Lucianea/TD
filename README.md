@@ -109,7 +109,7 @@ Cada aluno deverá apresentar um dos problemas abaixo. Definir as datas e pessoa
 
 4- Pesquisa operacional [recurso eletrônico] / Marcos Arenales...[et al.]. - Rio de Janeiro : Elsevier : ABEPRO, 2011.
 
-#Aulas online
+# Aulas online
 
 Toda terça de 16h às 19h na sala virtual: Teoria da Decisão II
 Teoria da Decisão II
