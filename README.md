@@ -94,6 +94,7 @@ Cada aluno deverá apresentar um dos problemas abaixo. Definir as datas e pessoa
 - Problema de transferência de empregados - Renato
 - O Problema de Alocação de Pessoal - Cristiane
 - Problema da troca de equipamento - Thaynara
+- Problema da Otimização de Padrões de Produção ( I ) - Clayson Sá
 - Problema clássico de transporte - Késia
 - Problema de transporte com transbordo - Vanessa
 - Problema de alocação de tarefas - Roberta
