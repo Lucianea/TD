@@ -1,0 +1,100 @@
+---
+title: "Solver do R"
+author: "Profa. Luciane Alcoforado/AFA"
+date: "04 de fevereiro de 2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+### **RESOLVENDO PROBLEMAS DE PROGRAMAÇÃO LINEAR NO R**
+
+
+* [lp_solve](http://lpsolve.sourceforge.net/5.5/) que é disponibilizado no R por meio dos pacotes [lpSolve](https://cran.r-project.org/web/packages/lpSolve/lpSolve.pdf) e [lpSolveAPI](https://cran.r-project.org/web/packages/lpSolveAPI/lpSolveAPI.pdf);
+* [GLPK](https://www.gnu.org/software/glpk/) que no R pode ser usado via pacote [Rglpk](https://cran.r-project.org/web/packages/Rglpk/Rglpk.pdf);
+* [SYMPHONY](https://projects.coin-or.org/SYMPHONY) que está disponível no R via pacote [Rsymphony](https://cran.r-project.org/web/packages/Rsymphony/Rsymphony.pdf)
+
+Alguns destes pacotes têm funções que permitem a leitura de arquivos contendo problemas de programação linear, programação linear inteira e programação linear inteira mista escritos no formato CPLEX, por exemplo.
+
+### **Resolvendo problemas de programaçaõ linear usando o pacote `lpSolve`:**
+
+1. Considere o exemplo apresentado na aula 5 sobre o método de duas fases
+
+$max z = x1+2x2$
+
+sujeito a:
+
+$1x1+0x2 \le 2$ (R1)
+
+$0x1+1x2 \le 2$ (R2)
+
+$1x1+1x2 \ge 3$ (R3)
+
+$x1, x2 \ge0$
+
+```{r message=FALSE, warning=FALSE}
+##########################
+####     PACOTES     #####
+##########################
+
+# Instalar pacotes necessários
+#install.packages(c("lpSolve","lpSolveAPI"))
+
+# Carregar pacotes lpSolve
+suppressMessages(require(lpSolve))
+
+##########################
+####     PROBLEMA    #####
+##########################
+
+# coeficientes na função objetivo 
+func.objetivo <- c(1 , 2)
+
+# coeficientes nas restrições.
+#R1=c(1, 0) 
+#R2=c(0, 1)
+#R3 = c(1, 1)
+
+coeficientes.restricoes <- rbind(R1=c(1, 0), R2=c(0, 1), R3 = c(1, 1) )
+
+# sinal das restrições. Deve obedecer a ordem da matriz de coeficientes
+direcao.restricoes <- c("<=","<=",">=")
+
+# limite das restrições. Deve obedecer a ordem da matriz de coeficientes
+limites.restricoes <- c(2,2,3)
+
+##########################
+####     SOLUÇÃO     #####
+##########################
+
+# Basicamente, usamos a função lp do pacote lpSolve com os seguintes parâmetros:
+# direction: que recebe max ou min dependendo se o problema é de maximização ou minização, respectivamente
+# objective.in: que recebe o nome do vetor com parâmetros da função objetivo
+# const.mat: que recebe o nome da matriz com coeficientes das restrições
+# const.rhs: que recebe o nome do vetor com os limites das restrições
+# mais opções da função podem ser obtidas por meio do help(lp) como por exemplo all.int
+
+solucao.problema <- lpSolve::lp(direction = "max",             
+                               objective.in = func.objetivo,  
+                               const.mat = coeficientes.restricoes,
+                               const.dir = direcao.restricoes,
+                               const.rhs = limites.restricoes, 
+  
+  all.int=F)
+
+##########################
+####    RESULTADO    #####
+##########################
+
+# valor da função objetivo na solução
+solucao.problema$objval
+
+# Valores para as variáveis de escolha que geram máximo ou mínimo dependendo do problema
+solucao.problema$solution
+```
+
+
+

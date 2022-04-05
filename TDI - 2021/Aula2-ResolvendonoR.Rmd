@@ -1,0 +1,303 @@
+---
+title: "Solver do R"
+author: "Profa. Luciane Alcoforado/AFA"
+date: "26 de outubro de 2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+### **RESOLVENDO PROBLEMAS DE PROGRAMAÇÃO LINEAR NO R**
+
+
+* [lp_solve](http://lpsolve.sourceforge.net/5.5/) que é disponibilizado no R por meio dos pacotes [lpSolve](https://cran.r-project.org/web/packages/lpSolve/lpSolve.pdf) e [lpSolveAPI](https://cran.r-project.org/web/packages/lpSolveAPI/lpSolveAPI.pdf);
+* [GLPK](https://www.gnu.org/software/glpk/) que no R pode ser usado via pacote [Rglpk](https://cran.r-project.org/web/packages/Rglpk/Rglpk.pdf);
+* [SYMPHONY](https://projects.coin-or.org/SYMPHONY) que está disponível no R via pacote [Rsymphony](https://cran.r-project.org/web/packages/Rsymphony/Rsymphony.pdf)
+
+Alguns destes pacotes têm funções que permitem a leitura de arquivos contendo problemas de programação linear, programação linear inteira e programação linear inteira mista escritos no formato CPLEX, por exemplo.
+
+### **Resolvendo problemas de programaçaõ linear usando o pacote `lpSolve`:**
+
+1. Considere o exemplo apresentado na aula 2 sobre modelagem, abaixo temos a solução do problema de programação linear no R.
+
+$max z = x1+x2+x3$
+
+sujeito a:
+
+$2x1+2x2+0x3 \le 30$ (R1)
+
+$0x1+4x2+1x3 \le 65$ (R2)
+
+$1x1+0x2+0.1x3 \le 25$ (R3)
+
+$x1, x2, x3 \ge0$
+
+```{r message=FALSE, warning=FALSE}
+##########################
+####     PACOTES     #####
+##########################
+
+# Instalar pacotes necessários
+#install.packages(c("lpSolve","lpSolveAPI"))
+
+# Carregar pacotes lpSolve
+suppressMessages(require(lpSolve))
+
+##########################
+####     PROBLEMA    #####
+##########################
+
+# coeficientes na função objetivo 
+func.objetivo <- c(1 , 1, 1)
+
+# coeficientes nas restrições. 
+coeficientes.restricoes <- rbind(R1=c(2, 1, 0), R2=c(0, 4, 1), R3 = c(1, 1, 0.1))
+
+# sinal das restrições. Deve obedecer a ordem da matriz de coeficientes
+direcao.restricoes <- c("<=","<=","<=")
+
+# limite das restrições. Deve obedecer a ordem da matriz de coeficientes
+limites.restricoes <- c(30, 65, 25)
+
+##########################
+####     SOLUÇÃO     #####
+##########################
+
+# Basicamente, usamos a função lp do pacote lpSolve com os seguintes parâmetros:
+# direction: que recebe max ou min dependendo se o problema é de maximização ou minização, respectivamente
+# objective.in: que recebe o nome do vetor com parâmetros da função objetivo
+# const.mat: que recebe o nome da matriz com coeficientes das restrições
+# const.rhs: que recebe o nome do vetor com os limites das restrições
+# mais opções da função podem ser obtidas por meio do help(lp) como por exemplo all.int
+
+solucao.problema <- lpSolve::lp(direction = "max",             
+                               objective.in = func.objetivo,  
+                               const.mat = coeficientes.restricoes,
+                               const.dir = direcao.restricoes,
+                               const.rhs = limites.restricoes, 
+  
+  all.int=T)
+
+##########################
+####    RESULTADO    #####
+##########################
+
+# valor da função objetivo na solução
+solucao.problema$objval
+
+# Valores para as variáveis de escolha que geram máximo ou mínimo dependendo do problema
+solucao.problema$solution
+```
+
+2. Considere o exemplo 2 apresentado na aula 2 sobre modelagem, abaixo temos a solução do problema de programação linear no R.
+
+$max z = 0.5x1+20x2+0.75x3$
+
+sujeito a:
+
+$2x1+2x2+0x3 \le 30$ (R1)
+
+$0x1+4x2+1x3 \le 65$ (R2)
+
+$1x1+0x2+0.1x3 \le 25$ (R3)
+
+$x1, x2, x3 \ge0$
+
+```{r message=FALSE, warning=FALSE}
+##########################
+####     PACOTES     #####
+##########################
+
+# Instalar pacotes necessários
+#install.packages(c("lpSolve","lpSolveAPI"))
+
+# Carregar pacotes lpSolve
+suppressMessages(require(lpSolve))
+
+##########################
+####     PROBLEMA    #####
+##########################
+
+# coeficientes na função objetivo 
+func.objetivo <- c(0.5 , 20, 0.75)
+
+# coeficientes nas restrições. 
+coeficientes.restricoes <- rbind(R1=c(2, 1, 0), R2=c(0, 4, 1), R3 = c(1, 1, 0.1))
+
+# sinal das restrições. Deve obedecer a ordem da matriz de coeficientes
+direcao.restricoes <- c("<=","<=","<=")
+
+# limite das restrições. Deve obedecer a ordem da matriz de coeficientes
+limites.restricoes <- c(30, 65, 25)
+
+##########################
+####     SOLUÇÃO     #####
+##########################
+
+# Basicamente, usamos a função lp do pacote lpSolve com os seguintes parâmetros:
+# direction: que recebe max ou min dependendo se o problema é de maximização ou minização, respectivamente
+# objective.in: que recebe o nome do vetor com parâmetros da função objetivo
+# const.mat: que recebe o nome da matriz com coeficientes das restrições
+# const.rhs: que recebe o nome do vetor com os limites das restrições
+# mais opções da função podem ser obtidas por meio do help(lp) como por exemplo all.int
+
+solucao.problema <- lpSolve::lp(direction = "max",             
+                               objective.in = func.objetivo,  
+                               const.mat = coeficientes.restricoes,
+                               const.dir = direcao.restricoes,
+                               const.rhs = limites.restricoes, 
+  
+  all.int=T)
+
+##########################
+####    RESULTADO    #####
+##########################
+
+# valor da função objetivo na solução
+solucao.problema$objval
+
+# Valores para as variáveis de escolha que geram máximo ou mínimo dependendo do problema
+solucao.problema$solution
+```
+
+3. Considere o exemplo 3 apresentado na aula 2 sobre modelagem, abaixo temos a solução do problema de programação linear no R.
+
+$min w = 3x1 + 2x2 + 1,8x3 + 1,6x4 + 3x5 + 3x6 + 4x7 + 4x8 + 4,5x9 + 7,5x10 + 8x11 + 8,5x12$
+
+sujeito a:
+
+$30x1 + 12x2 + 2x3 + 4,9x4 + 10x5 + 9x6 + 71x7 + 48,6x8 + 30x9 + 15x10 + 100x11 + 11x12  \ge 80$ (R1)
+
+$74.000x1 + 1.388x2 + 47.250x3 + 11.300x4 + 145.000x5 + 32.150x6 + 0x7 + 410x8 + 10.000x9 + 0x10+ 320.000x11+ 1.400x12 \ge 45.000$ (R2)
+
+$0x1 + 0x2 + 0x3 + 0x4 + x5 + 10x6 + 0x7 + 0x8 + 0x9 + 30x10 + 1.000x11 + 21,4x12  \ge 20$ (R3)
+
+$4x1 + 5x2 + x3 + 2,5x4 + 0,05x5 + 0,5x6 + 0,56x7 + 4x8 + 0,8x9 + 0,6x10 + 3,8x11 + 0,02x12 \ge 4$ (R4)
+
+$x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9 + x10 + x11 + x12  \le 1,5$ (R5)
+
+$x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12 \ge0$
+
+```{r message=FALSE, warning=FALSE}
+##########################
+####     PACOTES     #####
+##########################
+
+# Instalar pacotes necessários
+#install.packages(c("lpSolve","lpSolveAPI"))
+
+# Carregar pacotes lpSolve
+suppressMessages(require(lpSolve))
+
+##########################
+####     PROBLEMA    #####
+##########################
+
+# coeficientes na função objetivo 
+func.objetivo <- c(3, 2, 1.8, 1.6, 3, 3, 4, 4, 4.5,7.5, 8, 8.5)
+
+# coeficientes nas restrições. 
+coeficientes.restricoes <- rbind(R1=c(30,12,2,4.9,10, 9,71,48.6,30,15,100,11),
+  R2=c(74000, 1388, 47250,11300,145000,32150,0,410,10000, 0, 320000,1400),
+  R3 = c(0,0,0,0,1,10,0,0,0,30,1000, 21.4), 
+  R4 = c(4,5,1, 2.5,0.05,0.5,0.56,4,0.8,0.6,3.8,0.02),
+  R5 = rep(1,12))
+
+# sinal das restrições. Deve obedecer a ordem da matriz de coeficientes
+direcao.restricoes <- c(">=",">=",">=",">=","<=")
+
+# limite das restrições. Deve obedecer a ordem da matriz de coeficientes
+limites.restricoes <- c(80, 45000, 20,4, 1.5)
+
+##########################
+####     SOLUÇÃO     #####
+##########################
+
+# Basicamente, usamos a função lp do pacote lpSolve com os seguintes parâmetros:
+# direction: que recebe max ou min dependendo se o problema é de maximização ou minização, respectivamente
+# objective.in: que recebe o nome do vetor com parâmetros da função objetivo
+# const.mat: que recebe o nome da matriz com coeficientes das restrições
+# const.rhs: que recebe o nome do vetor com os limites das restrições
+# mais opções da função podem ser obtidas por meio do help(lp) como por exemplo all.int
+
+solucao.problema <- lpSolve::lp(direction = "min",             
+                               objective.in = func.objetivo,  
+                               const.mat = coeficientes.restricoes,
+                               const.dir = direcao.restricoes,
+                               const.rhs = limites.restricoes, 
+  
+  all.int=F)
+
+##########################
+####    RESULTADO    #####
+##########################
+
+# valor da função objetivo na solução
+solucao.problema$objval
+
+# Valores para as variáveis de escolha que geram máximo ou mínimo dependendo do problema
+solucao.problema$solution
+```
+
+```{r}
+# coeficientes na função objetivo 
+func.objetivo <- c(2, 1)
+
+# coeficientes nas restrições. 
+coeficientes.restricoes <- rbind(R1=c(1,3),
+  R2=c(3,4))
+
+# sinal das restrições. Deve obedecer a ordem da matriz de coeficientes
+direcao.restricoes <- c("<=","<=")
+
+# limite das restrições. Deve obedecer a ordem da matriz de coeficientes
+limites.restricoes <- c(6,12)
+
+##########################
+####     SOLUÇÃO     #####
+##########################
+
+# Basicamente, usamos a função lp do pacote lpSolve com os seguintes parâmetros:
+# direction: que recebe max ou min dependendo se o problema é de maximização ou minização, respectivamente
+# objective.in: que recebe o nome do vetor com parâmetros da função objetivo
+# const.mat: que recebe o nome da matriz com coeficientes das restrições
+# const.rhs: que recebe o nome do vetor com os limites das restrições
+# mais opções da função podem ser obtidas por meio do help(lp) como por exemplo all.int
+
+solucao.problema <- lpSolve::lp(direction = "max",             
+                               objective.in = func.objetivo,  
+                               const.mat = coeficientes.restricoes,
+                               const.dir = direcao.restricoes,
+                               const.rhs = limites.restricoes, 
+  
+  all.int=F)
+
+##########################
+####    RESULTADO    #####
+##########################
+
+# valor da função objetivo na solução
+solucao.problema$objval
+
+# Valores para as variáveis de escolha que geram máximo ou mínimo dependendo do problema
+solucao.problema$solution
+```
+
+4. Considere o seguinte problema de minimização:
+
+$$
+\begin{aligned}
+& \text{MIN}
+& & z = -3x_{1}-4x_{2}-3x_{3} \\
+& \text{s.a.}
+& & 6x_{1}+2x_{2}+4x_{3}\leq 150 \\
+&&& x_{1}+x_{2}+6x_{3}\geq 0 \\
+&&& 4x_{1}+5x_{2}+4x_{3}= 40 \\
+&&& x_{1} \geq 0 \\
+&&& x_{2} \geq 0 \\
+&&& x_{3} \geq 0 \\
+\end{aligned}
+$$
