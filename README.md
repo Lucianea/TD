@@ -89,7 +89,7 @@ No entanto para satisfazer a restrição Q <= 180, a solução ótima seria enco
 
 Cada aluno deverá apresentar um dos problemas abaixo. Definir as datas e pessoas.
 
-- Problema de alocação de recursos: Produção de cimento - Emmanuel 12/04/2022
+- Problema de alocação de recursos: Produção de cimento - Emmanuel 12/04/2022 - ref possível: https://multivix.edu.br/wp-content/uploads/2018/08/aplicacao-da-pesquisa-operacional-na-reducao-de-custos-de-uma-industria-cimenteira.pdf
 - O Problema da Mistura de Petróleo - Matheus 12/04/2022
 - Problema de transferência de empregados - Renato
 - O Problema de Alocação de Pessoal - Cristiane
