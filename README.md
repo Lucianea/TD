@@ -116,9 +116,7 @@ Cada aluno deverá apresentar um dos problemas abaixo. Definir as datas e pessoa
 
 Toda terça de 16h às 19h na sala virtual: Teoria da Decisão II
 Teoria da Decisão II
-Terça-feira, 5 de abril · 16:00 até 19:00
-Informações de participação do Google Meet
-Link da videochamada: https://meet.google.com/bxz-rrwr-dam
+Link da sala online: https://meet.google.com/sww-jqjb-kks
 
 
 
