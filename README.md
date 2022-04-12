@@ -92,15 +92,15 @@ Cada aluno deverá apresentar um dos problemas abaixo. Definir as datas e pessoa
 - Problema de alocação de recursos: Produção de cimento - Emmanuel 12/04/2022 - ref possível: https://multivix.edu.br/wp-content/uploads/2018/08/aplicacao-da-pesquisa-operacional-na-reducao-de-custos-de-uma-industria-cimenteira.pdf
 - O Problema da Mistura de Petróleo - Matheus 12/04/2022
 - Problema de transferência de empregados - Renato
-- O Problema de Alocação de Pessoal - Cristiane
-- Problema da troca de equipamento - Thaynara
+- O Problema da Dieta - Cristiane 19/04/2022
+- Problema da troca de equipamento - 
 - Problema da Otimização de Padrões de Produção ( I ) (17) - Clayson Sá
-- Problema clássico de transporte - Késia
-- Problema de transporte com transbordo - Vanessa
-- Problema de alocação de tarefas - Roberta
-- O Problema do Casamento e da Casa Própria (Misto) (23) - Virginia
+- Problema clássico de transporte - Késia 19/04/2022
+- Problema de transporte com transbordo - Vanessa 26/04/2022
+- Problema de alocação de tarefas - Roberta 26/04/2022
+- O Problema do Casamento e da Casa Própria (Misto) (23) - Virginia 26/04/2022
 - O Problema da Câmara de Segurança ( I ) (24)
-- O Problema do Incêndio Florestal – Combate Massivo ao Incêndio ( I ) (27)
+- O Problema do Incêndio Florestal – Combate Massivo ao Incêndio ( I ) (27) Thaynara 19/04/2022
 
 # Bibliografia
 
