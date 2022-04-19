@@ -94,12 +94,13 @@ Cada aluno deverá apresentar um dos problemas abaixo. Definir as datas e pessoa
 - Problema de transferência de empregados - Renato
 - O Problema da Dieta - Cristiane 19/04/2022
 - Problema da troca de equipamento - 
-- Problema da Otimização de Padrões de Produção ( I ) (17) - Clayson Sá
+- Problema da Otimização de Padrões de Produção ( I ) (17) - Clayson Sá 26/04/2022
 - Problema clássico de transporte - Késia 19/04/2022
 - Problema de transporte com transbordo - Vanessa 26/04/2022
 - Problema de alocação de tarefas - Roberta 26/04/2022
 - O Problema do Casamento e da Casa Própria (Misto) (23) - Virginia 26/04/2022
-- O Problema da Câmara de Segurança ( I ) (24)
+- O Problema da clínica cirúrgica - Alexandra 03/05/2022
+- O Problema da Câmara de Segurança ( I ) (24) - Patrícia 03/05/2022
 - O Problema do Incêndio Florestal – Combate Massivo ao Incêndio ( I ) (27) Thaynara 19/04/2022
 
 # Bibliografia
