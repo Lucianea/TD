@@ -119,6 +119,13 @@ Toda terça de 16h às 19h na sala virtual: Teoria da Decisão II
 Teoria da Decisão II
 Link da sala online: https://meet.google.com/sww-jqjb-kks
 
+#Links de aulas gravadas 
+
+## 19/04/2022 https://www.youtube.com/watch?v=AZk1Xlu-xas
+
+## 26/04/2022 Parte1: https://1drv.ms/v/s!AoJzBLqwBuyHgthCMN1guTgGhNzQLg?e=MKEXuW
+              Parte2: https://1drv.ms/v/s!AoJzBLqwBuyHgthBSQ04piEVoIUOFw?e=bY3u6v
+              Parte3: https://1drv.ms/v/s!AoJzBLqwBuyHgthCMN1guTgGhNzQLg?e=YOXmzD
 
 
 
