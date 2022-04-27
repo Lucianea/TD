@@ -125,9 +125,9 @@ Link da sala online: https://meet.google.com/sww-jqjb-kks
 
 ## 26/04/2022 Parte1: https://1drv.ms/v/s!AoJzBLqwBuyHgthCMN1guTgGhNzQLg?e=MKEXuW
 
-              ### Parte2: [https://1drv.ms/v/s!AoJzBLqwBuyHgthBSQ04piEVoIUOFw?e=bY3u6v]
+### Parte2: [https://1drv.ms/v/s!AoJzBLqwBuyHgthBSQ04piEVoIUOFw?e=bY3u6v]
               
-              ### Parte3: (https://1drv.ms/v/s!AoJzBLqwBuyHgthCMN1guTgGhNzQLg?e=YOXmzD)
+### Parte3: (https://1drv.ms/v/s!AoJzBLqwBuyHgthCMN1guTgGhNzQLg?e=YOXmzD)
               
               
 
