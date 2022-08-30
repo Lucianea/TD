@@ -89,15 +89,19 @@ No entanto para satisfazer a restrição Q <= 180, a solução ótima seria enco
 
 Cada aluno deverá apresentar um dos problemas abaixo. Definir as datas e pessoas.
 
-- Problema de alocação de recursos: Produção de cimento - Emmanuel
-- O Problema da Mistura de Petróleo - Matheus
+- Problema de alocação de recursos: Produção de cimento - Emmanuel 12/04/2022 - ref possível: https://multivix.edu.br/wp-content/uploads/2018/08/aplicacao-da-pesquisa-operacional-na-reducao-de-custos-de-uma-industria-cimenteira.pdf
+- O Problema da Mistura de Petróleo - Matheus 12/04/2022
 - Problema de transferência de empregados - Renato
-- O Problema de Alocação de Pessoal - Cristiane
-- Problema da troca de equipamento - Thaynara
-- Problema da Otimização de Padrões de Produção ( I ) - Clayson Sá
-- Problema clássico de transporte - Késia
-- Problema de transporte com transbordo - Vanessa
-- Problema de alocação de tarefas - Roberta
+- O Problema da Dieta - Cristiane 19/04/2022
+- Problema da troca de equipamento - 
+- Problema da Otimização de Padrões de Produção ( I ) (17) - Clayson Sá 26/04/2022
+- Problema clássico de transporte - Késia 19/04/2022
+- Problema de transporte com transbordo - Vanessa 26/04/2022
+- Problema de alocação de tarefas - Roberta 26/04/2022
+- O Problema do Casamento e da Casa Própria (Misto) (23) - Virginia 26/04/2022
+- O Problema da escala de trabalho - Alexandra 03/05/2022 ref. possível: https://proceedings.science/sbpo-series/sbpo-2021/papers/comparacao-entre-diferentes-escalas-de-trabalho-para-minimizacao-de-custos--um-modelo-de-programacao-linear-aplicado-em-
+- O Problema da Câmara de Segurança ( I ) (24) - Patrícia 03/05/2022
+- O Problema do Incêndio Florestal – Combate Massivo ao Incêndio ( I ) (27) Thaynara 19/04/2022
 
 # Bibliografia
 
@@ -113,10 +117,19 @@ Cada aluno deverá apresentar um dos problemas abaixo. Definir as datas e pessoa
 
 Toda terça de 16h às 19h na sala virtual: Teoria da Decisão II
 Teoria da Decisão II
-Terça-feira, 5 de abril · 16:00 até 19:00
-Informações de participação do Google Meet
-Link da videochamada: https://meet.google.com/bxz-rrwr-dam
+Link da sala online: https://meet.google.com/sww-jqjb-kks
 
+#Links de aulas gravadas 
+
+## 19/04/2022 https://www.youtube.com/watch?v=AZk1Xlu-xas
+
+## 26/04/2022 Parte1: https://1drv.ms/v/s!AoJzBLqwBuyHgthCMN1guTgGhNzQLg?e=MKEXuW
+
+### Parte2: [https://1drv.ms/v/s!AoJzBLqwBuyHgthBSQ04piEVoIUOFw?e=bY3u6v]
+              
+### Parte3: (https://1drv.ms/v/s!AoJzBLqwBuyHgthCMN1guTgGhNzQLg?e=YOXmzD)
+              
+              
 
 
 
