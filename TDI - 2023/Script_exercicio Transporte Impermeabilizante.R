@@ -1,6 +1,4 @@
-setwd("C:/Users/TPC02/Documents/
-  PesquisaOperacional/R_lpsolve")
-Dados<- read.csv2("Transporte_impermeabilizante.csv")
+Dados<-read.csv2("https://raw.githubusercontent.com/Lucianea/TD/main/TDI%20-%202023/Transporte_impermeabilizante.csv")
 View(Dados)
 n = 9 #número de variáveis
 m = 6 #número de restrições
